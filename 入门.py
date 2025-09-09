@@ -99,13 +99,38 @@ print(f'今天蔬菜特价了，{goods_name}只要{goods_price:.2f}元/斤')
 # else:
 #     print("不构成酒驾")
 
-player = int(input('请输入您的出拳信息（1-石头、2-剪刀、3-布）'))
 
-computer = 1
+# from random import randint
+#
+# player = int(input('请输入您的出拳信息（1-石头、2-剪刀、3-布）'))
+#
+# computer = randint(1, 3)
+#
+# if (player == 1 and computer == 2) or (player == 2 and computer == 3) or (player == 3 and computer == 1):
+#     print('玩家获胜')
+# elif player == computer:
+#     print("平局")
+# else:
+#     print("电脑获胜")
 
-if (player == 1 and computer == 2) or (player == 2 and computer == 3) or (player == 3 and computer == 1):
-    print('玩家获胜')
-elif player == computer:
-    print("平局")
-else:
-    print("电脑获胜")
+str1 = 'simple'
+for i in str1:
+    print(i)
+
+# 从1循环到100累加
+sum = 0
+for i in range(1, 101):
+    sum += i
+print(sum)
+
+for i in range(1, 6):
+    if i==4:
+        print("已经吃饱了，后面的苹果就不吃了")
+        break
+    print(f"正在吃第{i}个苹果")
+
+for i in range(1, 6):
+    if i==3:
+        print("不好，有大虫，这个苹果不吃了")
+        continue
+    print(f"正在吃第{i}个苹果")
