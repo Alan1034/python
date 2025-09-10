@@ -123,14 +123,113 @@ for i in range(1, 101):
     sum += i
 print(sum)
 
-for i in range(1, 6):
-    if i==4:
-        print("已经吃饱了，后面的苹果就不吃了")
-        break
-    print(f"正在吃第{i}个苹果")
+# for i in range(1, 6):
+#     if i==4:
+#         print("已经吃饱了，后面的苹果就不吃了")
+#         break
+#     print(f"正在吃第{i}个苹果")
+#
+# for i in range(1, 6):
+#     if i==3:
+#         print("不好，有大虫，这个苹果不吃了")
+#         continue
+#     print(f"正在吃第{i}个苹果")
 
-for i in range(1, 6):
-    if i==3:
-        print("不好，有大虫，这个苹果不吃了")
-        continue
-    print(f"正在吃第{i}个苹果")
+# from random import randint
+#
+# rand_num = randint(1, 10)
+#
+# for i in range(3):
+#     user_num=int(input("请输入您要猜的数字："))
+#     if user_num == rand_num:
+#         print("恭喜你，猜对了")
+#         break
+#     elif user_num>rand_num:
+#         print("很抱歉，猜大了")
+#     else:
+#         print("很抱歉，猜小了")
+
+"""
+列表的增删改查
+"""
+# 查询
+list1=[10,20,30]
+print(list1[0])
+
+#增加
+list1.append(40)
+print(list1)
+
+#删除
+del list1[1]
+print(list1)
+
+#更新
+list1[2]=100
+print(list1)
+
+# for循环实现列表的遍历操作
+for i in list1:
+    print(i)
+
+list1=[1,2,3]
+list2=[4,5,6]
+
+# 获取列表的长度
+print(len(list1))
+
+# 使用+运算符实现列表合并
+print(list1+list2)
+
+# 使用*运算符实现列表元素的复制操作
+print(list1*4)
+
+# in关键字，判断元素是否出现在列表中
+print(3 in list1)
+
+"""
+切片
+切片三步走：1.看步长 2.绘制图像 3.记口诀
+基本语法：
+    列表名称[起始索引:结束索引:步长]
+1.步长为正则从左向右移动，步长为负，则从右向左移动
+2.绘制图像，把列表元素值，与正索引，负索引绘制出来
+3.切片其实很简单，只顾头来尾不管，步长为正则正向移动，步长为负则逆向移动
+"""
+abcd_list=['a','b','c','d']
+print(abcd_list[0:3:1])#1代表从左向右移动 ['a', 'b', 'c']
+print(abcd_list[0:3]) #['a', 'b', 'c']
+
+print(abcd_list[0:])#从start(0)位置开始截取，一直截取到列表尾部（包含尾部元素）['a', 'b', 'c', 'd']
+print(abcd_list[:3])#从0开始截取，截取到stop-1结束 ['a', 'b', 'c']
+print(abcd_list[:])#截取整个列表 ['a', 'b', 'c', 'd']
+print(abcd_list[::-1]) #倒排['d', 'c', 'b', 'a']
+
+list1=[1,2,3,1]
+print(len(list1)) #4
+
+print(max(list1)) #3
+print(min(list1))#1
+
+tuple1=(10,20,30)
+print(tuple1)#(10, 20, 30)
+list2=list(tuple1)
+print(list2)#[10, 20, 30]
+print(type(list2))#<class 'list'>
+
+count=list1.count(1)
+print(count)#2
+
+list1.extend([4,5,6])
+print(list1)#[1, 2, 3, 1, 4, 5, 6]
+
+list1.remove(6)
+print(list1)#[1, 2, 3, 1, 4, 5]
+
+list2=[10,20,30]
+list2.reverse()
+print(list2)#[30, 20, 10]
+
+list2.sort(reverse=True)
+print(list2)#[30, 20, 10]
+
