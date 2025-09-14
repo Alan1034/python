@@ -153,36 +153,36 @@ print(sum)
 列表的增删改查
 """
 # 查询
-list1=[10,20,30]
+list1 = [10, 20, 30]
 print(list1[0])
 
-#增加
+# 增加
 list1.append(40)
 print(list1)
 
-#删除
+# 删除
 del list1[1]
 print(list1)
 
-#更新
-list1[2]=100
+# 更新
+list1[2] = 100
 print(list1)
 
 # for循环实现列表的遍历操作
 for i in list1:
     print(i)
 
-list1=[1,2,3]
-list2=[4,5,6]
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
 
 # 获取列表的长度
 print(len(list1))
 
 # 使用+运算符实现列表合并
-print(list1+list2)
+print(list1 + list2)
 
 # 使用*运算符实现列表元素的复制操作
-print(list1*4)
+print(list1 * 4)
 
 # in关键字，判断元素是否出现在列表中
 print(3 in list1)
@@ -196,40 +196,170 @@ print(3 in list1)
 2.绘制图像，把列表元素值，与正索引，负索引绘制出来
 3.切片其实很简单，只顾头来尾不管，步长为正则正向移动，步长为负则逆向移动
 """
-abcd_list=['a','b','c','d']
-print(abcd_list[0:3:1])#1代表从左向右移动 ['a', 'b', 'c']
-print(abcd_list[0:3]) #['a', 'b', 'c']
+abcd_list = ['a', 'b', 'c', 'd']
+print(abcd_list[0:3:1])  # 1代表从左向右移动 ['a', 'b', 'c']
+print(abcd_list[0:3])  # ['a', 'b', 'c']
 
-print(abcd_list[0:])#从start(0)位置开始截取，一直截取到列表尾部（包含尾部元素）['a', 'b', 'c', 'd']
-print(abcd_list[:3])#从0开始截取，截取到stop-1结束 ['a', 'b', 'c']
-print(abcd_list[:])#截取整个列表 ['a', 'b', 'c', 'd']
-print(abcd_list[::-1]) #倒排['d', 'c', 'b', 'a']
+print(abcd_list[0:])  # 从start(0)位置开始截取，一直截取到列表尾部（包含尾部元素）['a', 'b', 'c', 'd']
+print(abcd_list[:3])  # 从0开始截取，截取到stop-1结束 ['a', 'b', 'c']
+print(abcd_list[:])  # 截取整个列表 ['a', 'b', 'c', 'd']
+print(abcd_list[::-1])  # 倒排['d', 'c', 'b', 'a']
 
-list1=[1,2,3,1]
-print(len(list1)) #4
+list1 = [1, 2, 3, 1]
+print(len(list1))  # 4
 
-print(max(list1)) #3
-print(min(list1))#1
+print(max(list1))  # 3
+print(min(list1))  # 1
 
-tuple1=(10,20,30)
-print(tuple1)#(10, 20, 30)
-list2=list(tuple1)
-print(list2)#[10, 20, 30]
-print(type(list2))#<class 'list'>
+tuple1 = (10, 20, 30)
+print(tuple1)  # (10, 20, 30)
+list2 = list(tuple1)
+print(list2)  # [10, 20, 30]
+print(type(list2))  # <class 'list'>
 
-count=list1.count(1)
-print(count)#2
+count = list1.count(1)
+print(count)  # 2
 
-list1.extend([4,5,6])
-print(list1)#[1, 2, 3, 1, 4, 5, 6]
+list1.extend([4, 5, 6])
+print(list1)  # [1, 2, 3, 1, 4, 5, 6]
 
 list1.remove(6)
-print(list1)#[1, 2, 3, 1, 4, 5]
+print(list1)  # [1, 2, 3, 1, 4, 5]
 
-list2=[10,20,30]
+list2 = [10, 20, 30]
 list2.reverse()
-print(list2)#[30, 20, 10]
+print(list2)  # [30, 20, 10]
 
 list2.sort(reverse=True)
-print(list2)#[30, 20, 10]
+print(list2)  # [30, 20, 10]
+
+tuple1 = (10,)
+print(tuple1)  # (10,)
+print(type(tuple1))  # <class 'tuple'>
+
+tuple2 = (10, 20, 30)
+print(tuple2)  # (10, 20, 30)
+print(type(tuple2))  # <class 'tuple'>
+
+print(tuple1.index(10))  # 0
+print(tuple1[0])  # 10
+
+"""
+10
+20
+30
+"""
+for i in tuple2:
+    print(i)
+
+dict2 = {'title': 'python入门教程'}
+print(type(dict2))
+print(dict2)
+
+print(dict2['title'])
+
+dict2['price'] = 6.69
+print(dict2)
+
+del dict2['title']
+print(dict2)
+
+dict2.clear()
+print(dict2)
+
+set1 = set()
+set2 = {1, 11, 22, 8, 9, 10}
+print(set2)
+print(type(set2))  # <class 'set'>
+
+set11 = {1, 2, 3, 4, 5}
+set22 = {4, 5, 6, 7, 8}
+# 交集
+print(set11 & set22)  # {4, 5}
+# 并集
+print(set11 | set22)  # {1, 2, 3, 4, 5, 6, 7, 8}
+# 差集
+print(set11 - set22)  # {1, 2, 3}
+
+
+def greet(name):
+    print(name + '，您好')
+    return "123"
+
+
+result = greet("张老师")
+print(result)
+
+num = 10
+
+
+def func():
+    # 引入global关键字，作用：在局部作用域中声明全局变量
+    global num
+    num = 100
+
+
+func()
+print(num)
+
+
+def func(name, age, address="榕树头"):
+    print(name)
+    print(age)
+    print(address)
+
+
+# 1.位置传参
+func("Tom", 23, "美国纽约")
+
+# 2.关键词传参
+func(name="Tom", address="美国纽约", age=23)
+
+
+def func(*args):
+    print(args)
+    print(type(args))  # <class 'tuple'>
+
+
+func()
+func(1)
+func(1, 2, 3)
+
+
+def func(**kwargs):
+    print(kwargs)
+    print(type(kwargs))  # <class 'dict'>
+
+
+func()
+func(name="Tom", age=23)
+
+
+def func1():
+    return 100
+
+
+print(func1())
+
+# 使用lambda表达式
+func2 = lambda: 100
+print(func2)  # <function <lambda> at 0x0000023356EF7F60>
+print(func2())
+
+# 带普通参数的lambda表达式
+func1 = lambda a, b: a + b
+print(func1(10, 20))
+
+# 带默认值的参数lambda表达式
+func2 = lambda a, b, c=100: a + b + c
+print(func2(10, 20))
+
+# 带有包裹位置参数的lambda表达式
+func3 = lambda *args: args
+print(func3(1, 10, 100))#(1, 10, 100)
+
+# 带有包裹关键词参数的lambda表达式
+func4 = lambda **kwargs: kwargs
+print(func4(a=1, b=10, c=100))#{'a': 1, 'b': 10, 'c': 100}
+
 
