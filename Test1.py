@@ -25,19 +25,19 @@
 #         print("用户名或密码输入错误");
 #         times=times+1;
 
-# class BankAccount(object):
-#     def __init__(self, name, balance=0):
-#         self.name = name
-#         self.balance = balance
-#     def deposit(self, amount):
-#         self.balance += amount
-#     def withdraw(self, amount):
-#         self.balance -= amount
-#     def __str__(self):
-#         return "Name: {}, Balance: {}".format(self.name, self.balance);
-# a1=BankAccount("Alan", 100);
-# a1.deposit(100);
-# print(a1);
+class BankAccount(object):
+    def __init__(self, name, balance=0):
+        self.name = name
+        self.balance = balance
+    def deposit(self, amount):
+        self.balance += amount
+    def withdraw(self, amount):
+        self.balance -= amount
+    def __str__(self):
+        return "Name: {}, Balance: {}".format(self.name, self.balance);
+a1=BankAccount("Alan", 100);
+a1.deposit(100);
+print(a1);
 
 # str="hello world"
 # dict={}
