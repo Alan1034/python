@@ -31,10 +31,59 @@ import pandas as pd
 #
 # print_info(name="Alan",age=18,sex="男")
 
-prices=[80,90,85,95,70]
-prices.sort()
-print(prices)
-prices.sort(reverse=True)
-print(prices)
-print(pd.Series(prices).mean())
-print(min(prices))
+# prices=[80,90,85,95,70]
+# prices.sort()
+# print(prices)
+# prices.sort(reverse=True)
+# print(prices)
+# print(pd.Series(prices).mean())
+# print(min(prices))
+
+# import pandas as pd
+#
+# s4 = pd.Series([i for i in range(6)], index=[i for i in 'ABCDEF'])
+#
+# # Series和数值型变量计算
+# print(s4 * 5)
+#
+#
+#  # 索引完全相同的两个Series对象进行计算
+# print(s4)
+# # 构造与s4索引相同的s对象
+# s5 = pd.Series([10] * 6, index=[i for i in 'ABCDEF'])
+# print(s5)
+# # 两个索引相同的s对象进行运算
+# print(s4 + s5)
+#
+# # 索引不同的两个s对象运算
+# print(s4)
+# # 注意s6的最后一个索引值和s4的最后一个索引值不同
+# s6 = pd.Series([10]*6, index=[i for i in 'ABCDEG'])
+# print(s6)
+# print(s4 + s6)
+
+# import pandas as pd
+#
+# # 使用默认自增索引
+# s2 = pd.Series([1, 2, 3])
+# print(s2)
+# # 自定义索引
+# s3 = pd.Series([1, 2, 3], index=['A', 'B', 'C'])
+# print(s3)
+#
+# import pandas as pd
+#
+# # 使用元组
+# tst = (1, 2, 3, 4, 5, 6)
+# s1 = pd.Series(tst)
+# print(s1)
+# print(type(s1))
+#
+# # 使用字典：
+# dst = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6}
+# s2 = pd.Series(dst)
+# print(s2)
+# print(type(s2))
+
+
+
